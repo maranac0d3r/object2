@@ -1,6 +1,7 @@
-#min.js
+#unwanted
 *.min.js
 object2.js
+*-lock.json
 
 #Intelij
 .idea/
