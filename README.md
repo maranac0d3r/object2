@@ -1,5 +1,5 @@
 # object2
-Get from and put to an object easily.
+Get from an object, easily.
 
 
 ```shell
@@ -41,10 +41,6 @@ or
   - Multiple levels of array nesting: `'group[0].section.a.seat[3]'`.
   
 ## Usage example(s)
-
-#### property accessor as predicate
-> Avoid annoying __Cannot read property '...' of undefined__ `TypeError` without writing boilerplate anonymous functions or guards.
-
 ```js
 var object2 = require('object2')
 var avengers={
@@ -80,6 +76,8 @@ object2.get("thor.weapon.stormbreaker.activate",avengers)(true);
 object2.get("ironman.info.name.actoname",avengers);
 =>null
 ```
+
+# Inspired from Selectn
 
 ## Licenses
 [![LICENSE](http://img.shields.io/npm/l/object2.svg)](license)
