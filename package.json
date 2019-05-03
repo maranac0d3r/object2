@@ -1,0 +1,30 @@
+{
+  "name": "object2",
+  "version": "1.0.0",
+  "description": "Get from and put to an object easily.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://maranac0d3r:Shareit_11@github.com/maranac0d3r/object2.git"
+  },
+  "keywords": [
+    "object",
+    "object2",
+    "objectutils",
+    "selectn",
+    "jsonpath",
+    "string",
+    "path",
+    "dot",
+    "notation"
+  ],
+  "author": "maranac0d3r <maranac0d3r@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maranac0d3r/object2/issues"
+  },
+  "homepage": "https://github.com/maranac0d3r/object2#readme"
+}
