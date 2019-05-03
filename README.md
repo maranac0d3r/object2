@@ -9,7 +9,7 @@ npm i object2 --save
 or
 
 ```html
-<script src="https://unpkg.com/object2@1.0.1/object2.js"></script>
+<script src="https://unpkg.com/object2/object2.js"></script>
 ```
 
 
