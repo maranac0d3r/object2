@@ -1,14 +1,20 @@
 {
   "name": "object2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get from and put to an object easily.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify-standalone && uglifyjs index.js > object2.min.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://maranac0d3r:Shareit_11@github.com/maranac0d3r/object2.git"
+  },
+  "devDependencies": {
+    "browserify-standalone": "0.3.0",
+    "istanbul": "0.4.2",
+    "uglify-js": "*"
   },
   "keywords": [
     "object",
