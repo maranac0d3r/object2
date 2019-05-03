@@ -1,4 +1,4 @@
-# object2
+# object2 - Inspired from Selectn
 Get from an object, easily.
 
 
@@ -76,8 +76,6 @@ object2.get("thor.weapon.stormbreaker.activate",avengers)(true);
 object2.get("ironman.info.name.actoname",avengers);
 =>null
 ```
-
-# Inspired from Selectn
 
 ## Licenses
 [![LICENSE](http://img.shields.io/npm/l/object2.svg)](license)
