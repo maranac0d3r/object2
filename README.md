@@ -46,7 +46,7 @@ or
 > Avoid annoying __Cannot read property '...' of undefined__ `TypeError` without writing boilerplate anonymous functions or guards.
 
 ```js
-var object2 = require('@maranac0d3r/objectutils')
+var object2 = require('object2')
 var avengers={
     thor:{
         info:{
