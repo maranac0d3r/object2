@@ -6,6 +6,7 @@ function  get(path,object) {
     if(!len){
         return void  0;
     }
+
     var obj = object;
     var index = -1;
 
