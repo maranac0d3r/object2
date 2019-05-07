@@ -1,7 +1,7 @@
 {
   "name": "object2",
-  "version": "1.0.9",
-  "description": "Get from and put to an object easily.",
+  "version": "1.1.0",
+  "description": "Get from an object easily.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
