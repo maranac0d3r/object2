@@ -4,6 +4,7 @@ Get from an object, easily.
 ```shell
 npm i object2 --save
 ```
+or
 
 ```html
 <srcipt src="https://unpkg.com/object2/object2.js"></script>
