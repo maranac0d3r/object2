@@ -66,7 +66,6 @@ var avengers={
     }
 }
 
-//get
 
 object2.get("thor.info.name.actorname",avengers);
 =>Chris Hemsworth
@@ -118,6 +117,17 @@ ironman:{
     }
 }
 
+object.put(["ironman","info","name","castname"],avengers,"Tony Stark")
+=> {
+ironman:{
+        info:{
+            name:{
+                actorname:"Robert Downey Jr",
+                castname:"Tony Stark"
+            }
+        }
+    }
+}
 
 /*
 console.log(avengers);
@@ -125,7 +135,8 @@ console.log(avengers);
 ironman:{
         info:{
             name:{
-                actorname:"Robert Downey Jr"
+                actorname:"Robert Downey Jr",
+                castname:"Tony Stark"
             }
         }
     }
