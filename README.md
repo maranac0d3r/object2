@@ -39,7 +39,7 @@ or
 
 ###### into:
 
-    object2.put("thor.info.name",avengers,"Chris Hemsworth")
+    object2.put("thor.info.name",avengers,{castname:"Thor",actorname:"Chris Hemsworth"})
     
 ## Features
 
