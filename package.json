@@ -1,6 +1,6 @@
 {
   "name": "object2",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Get from and put to an object easily.",
   "main": "index.js",
   "scripts": {
