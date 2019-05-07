@@ -5,7 +5,9 @@ Get from an object, easily.
 npm i object2 --save
 ```
 
-
+```html
+<srcipt src="https://unpkg.com/object2/object2.js"></script>
+```
 
 ###### npm stats
 
