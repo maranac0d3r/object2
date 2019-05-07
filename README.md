@@ -40,18 +40,7 @@ or
 ###### into:
 
     object2.put("thor.info.name.actorname",avengers,"Chris Hemsworth")
-    
-## Features
-
-  - When the value at the given path is a function, it wont invoke (Seperated from selectn).
-  - Mitigate boilerplate guards like `if (obj && obj.a && obj.a.b && obj.a.b.c)`.
-  - Mitigate **TypeError** `Cannot read property '...' of undefined`.
-  - Dashed key access: `'stats.temperature-today'`.
-  - Compatible with [modern and legacy browsers][browsers], Node/CommonJS, and AMD.
-
-## Need to do
-  - Multiple levels of array nesting: `'group[0].section.a.seat[3]'`.
-  
+      
 ## Usage example(s)
 #### get
 
