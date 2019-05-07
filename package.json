@@ -1,6 +1,6 @@
 {
   "name": "object2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Get from and put to an object easily.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://maranac0d3r:Shareit_11@github.com/maranac0d3r/object2.git"
+    "url": "git+https://github.com/maranac0d3r/object2.git"
   },
   "devDependencies": {
     "browserify-standalone": "0.3.0",
