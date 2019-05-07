@@ -71,7 +71,7 @@ object2.get("thor.weapon.stormbreaker.activate",avengers)(true);
 =>"Yeah!! its activated"
 
 object2.get("ironman.info.name.actoname",avengers);
-=>null
+=>undefined
 ```
 
 ## Licenses
