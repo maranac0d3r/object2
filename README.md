@@ -35,11 +35,11 @@ or
     if(!thor.info.name){
     thor.info.name={}
     }
-    thor.info.name = {castname:"Thor",actorname:"Chris Hemsworth"}
+    thor.info.name.actorname = "Chris Hemsworth"
 
 ###### into:
 
-    object2.put("thor.info.name",avengers,{castname:"Thor",actorname:"Chris Hemsworth"})
+    object2.put("thor.info.name.actorname",avengers,"Chris Hemsworth")
     
 ## Features
 
