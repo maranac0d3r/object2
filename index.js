@@ -67,7 +67,7 @@ function delete1(path,object){
     if(typeOf(object[path[index]]) != OBJECT_TYPE && !isLast){
       return false;
     }else if(isLast){
-      delete object[path[index]]
+      return delete object[path[index]]
     }else{
       object=object[path[index]]
     }
