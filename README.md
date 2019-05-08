@@ -173,20 +173,17 @@ var avengers={
 }
 
 /*
-If the path exists in the given object,then it will delete the key,which is the path, from the object and return true.
-If the path doesn't exists,then it won't do any thing and simply returns false.
+If the path exists in the given object,then it will delete the key,which is the path, from the object.
+If the path doesn't exists,then it won't do any thing.
 */
 
 ** Note: This will change the original object **
 
 object2.delete("thor.info.name.actorname",avengers);
-=>true
 
 object2.delete(["thor","weapon"],avengers);
-=>true
 
-object2.delete("ironman.info.name.actorname",avengers);
-=>false
+object2.delete("ironman.info.name.actorname",avengers); //this won't do anything because of the path doesn't exist in the given object.
 
 /*
 console.log(avengers);
