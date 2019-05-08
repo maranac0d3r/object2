@@ -12,7 +12,7 @@ npm i object2 --save
 
 ## Overview
 
-###### allows you to refactor this:
+###### Get-allows you to refactor this:
 
     thor && thor.weapon && thor.weapon.stormbreaker 
 
@@ -21,7 +21,7 @@ npm i object2 --save
     object2.get('weapon.stormbreaker', thor)
 
 
-###### allows you to refactor this:
+###### Put-allows you to refactor this:
 
     if(!thor.info ) {
     thor.info={}
@@ -35,6 +35,17 @@ npm i object2 --save
 ###### into:
 
     object2.put("thor.info.name.actorname",avengers,"Chris Hemsworth")
+ 
+ 
+###### Delete-allows you to refactor this:
+
+    if(thor && thor.weapon && thor.weapon.stormbreaker){
+        delete thor.weapon.stormbreaker
+    }
+
+###### into:
+
+    object2.delete('weapon.stormbreaker', thor)
       
 ## Usage example(s)
 #### get
@@ -137,6 +148,59 @@ ironman:{
     }
 }
 */
+```
+#### delete
+```js
+var object2 = require('object2')
+var avengers={
+    thor:{
+        info:{
+            name:{
+                castname:"Thor",
+                actorname:"Chris Hemsworth",
+                
+            }
+        },
+        weapon:{
+            stormbreaker:{
+                activate:function(status){
+                    console.log("Yeah!! its "+(status?"activated":"deactivated"));
+                }
+
+            }
+        }
+    }
+}
+
+/*
+If the path exists in the given object,then it will delete the key,which is the path, from the object and return true.
+If the path doesn't exists,then it won't do any thing and simply returns false.
+*/
+
+** Note: This will change the original object **
+
+object2.delete("thor.info.name.actorname",avengers);
+=>true
+
+object2.delete(["thor","weapon"],avengers);
+=>true
+
+object2.delete("ironman.info.name.actorname",avengers);
+=>false
+
+/*
+console.log(avengers);
+=> {
+thor:{
+        info:{
+            name:{
+                castname:"Thor"
+            }
+        }
+    }
+}
+*/
+
 ```
 
 
