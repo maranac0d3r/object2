@@ -56,7 +56,7 @@ function delete1(path,object){
   path = getPath(path);
   var len = path.length;
   if(!len){
-    return false
+    return;
   }
   if(len==1){
     delete object[path[0]];
@@ -65,9 +65,9 @@ function delete1(path,object){
   while(++index<len){
     isLast = index==len-1;
     if(typeOf(object[path[index]]) != OBJECT_TYPE && !isLast){
-      return false;
+      return;
     }else if(isLast){
-      return delete object[path[index]]
+        delete object[path[index]]
     }else{
       object=object[path[index]]
     }
