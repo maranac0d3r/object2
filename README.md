@@ -1,5 +1,5 @@
 # object2 - Inspired from Selectn
-Get from and put to an object, easily.
+Get,Put,Delete from an object easily.
 
 ```shell
 npm i object2 --save
