@@ -29,7 +29,7 @@ function  get(path,object) {
 function put(path,object,value){
     path = getPath(path);
     var len = path.length;
-    if(!len){
+    if(!len || Object(object)!==object){
         return undefined;
     }
     if(len==1){
@@ -38,18 +38,14 @@ function put(path,object,value){
     }
     var obj = object;
     var index=-1;
-    while(++index < len){
-        isLast = index==len-1
-        if(typeOf(obj[path[index]]) !== OBJECT_TYPE &&!isLast ){
-            obj[path[index]]={}
+    while(++index < len-1){
+        if(Object(obj[path[index]])!==obj[path[index]]){
+            obj[path[index]] = {}
         }
-        if(!isLast){
-            obj=obj[path[index]]
-        }else{
-            obj[path[index]] = typeOf(value)===FUNCTION_TYPE?value(object[path[index]]):value;
-            return  object;
-        }
+        obj = obj[path[index]]
     }
+    obj[path[index]] = typeOf(value)===FUNCTION_TYPE?value(obj[path[index]]):value;
+    return  object;
 }
 
 function delete1(path,object){
@@ -62,15 +58,14 @@ function delete1(path,object){
     delete object[path[0]];
   }
   var index=-1;
-  while(++index<len){
-    isLast = index==len-1;
-    if(typeOf(object[path[index]]) != OBJECT_TYPE && !isLast){
-      return;
-    }else if(isLast){
-        delete object[path[index]]
-    }else{
-      object=object[path[index]]
-    }
+  while(++index<len-1){
+      if(Object(object[path[index]]) !== object[path[index]]){
+          return;
+      }
+      object = object[path[index]];
+  }
+  if(index==len-1){
+      delete object[path[index]]
   }
 }
 
