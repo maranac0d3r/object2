@@ -1,3 +1,5 @@
+const OBJECT_TYPE = "[object Object]";
+const FUNCTION_TYPE="[object Function]"
 function typeOf(obj){
     return Object.prototype.toString.call(obj);
 }
@@ -31,26 +33,49 @@ function put(path,object,value){
         return undefined;
     }
     if(len==1){
-        object[path[0]]=typeOf(value)==="[object Function]"?value(object[path[0]]):value;
+        object[path[0]]=typeOf(value)=== FUNCTION_TYPE?value(object[path[0]]):value;
         return  object;
     }
     var obj = object;
     var index=-1;
     while(++index < len){
         isLast = index==len-1
-        if(typeOf(obj[path[index]]) !== "[object Object]" &&!isLast ){
+        if(typeOf(obj[path[index]]) !== OBJECT_TYPE &&!isLast ){
             obj[path[index]]={}
         }
         if(!isLast){
             obj=obj[path[index]]
         }else{
-            obj[path[index]] = typeOf(value)==="[object Function]"?value(object[path[index]]):value;
+            obj[path[index]] = typeOf(value)===FUNCTION_TYPE?value(object[path[index]]):value;
             return  object;
         }
     }
 }
 
+function delete1(path,object){
+  path = getPath(path);
+  var len = path.length;
+  if(!len){
+    return false
+  }
+  if(len==1){
+    delete object[path[0]];
+  }
+  var index=-1;
+  while(++index<len){
+    isLast = index==len-1;
+    if(typeOf(object[path[index]]) != OBJECT_TYPE && !isLast){
+      return false;
+    }else if(isLast){
+      delete object[path[index]]
+    }else{
+      object=object[path[index]]
+    }
+  }
+}
+
 module.export =  {
     get:get,
-    put:put
+    put:put,
+    delete:delete1
 }
