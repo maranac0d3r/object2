@@ -1,4 +1,3 @@
-const OBJECT_TYPE = "[object Object]";
 const FUNCTION_TYPE="[object Function]"
 function typeOf(obj){
     return Object.prototype.toString.call(obj);
@@ -51,7 +50,7 @@ function put(path,object,value){
 function delete1(path,object){
   path = getPath(path);
   var len = path.length;
-  if(!len){
+  if(!len || Object(object)!==object){
     return;
   }
   if(len==1){
