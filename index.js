@@ -68,6 +68,7 @@ function delete1(path,object){
   }
 }
 
+
 module.export =  {
     get:get,
     put:put,
